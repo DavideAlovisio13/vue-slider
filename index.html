@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" v-on:mouseover="mouseover">
                     <div class="prev" @click="previousSlide"></div>
                     <div class="next" @click="nextSlide"></div>
                     <div class="thumb" :class="{'active': i === firstSlideActive}" v-for= "(slideImg, i) in slides" :key="i" @click="goToSlide(i)">

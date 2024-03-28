@@ -6,7 +6,7 @@ createApp({
     data(){
         return {
             slides: slides, // inseriamo un osservatore delle interazioni delle interazioni dell'oggetto in questione
-            firstSlideActive: 0 // inizializziamo l'indice della slide attiva, che inizialmente sarà la prima
+            firstSlideActive: 0, // inizializziamo l'indice della slide attiva, che inizialmente sarà la prima
         }
     },
     methods: {
@@ -33,7 +33,7 @@ createApp({
     },
 
     mounted() {
-
-    }
+        setInterval(this.nextSlide, 1000); // impostiamo un intervallo di tempo per andare avanti sulle slide
+        }
     
 }).mount('#app');
