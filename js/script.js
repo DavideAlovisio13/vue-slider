@@ -10,7 +10,13 @@ createApp({
         }
     },
     methods: {
-        
+        nextSlide(){
+            if(this.firstSlideActive < this.slides.length - 1){ // se l'indice della slide attiva è inferiore al numero di slide - 1
+            this.firstSlideActive++; // incrementa l'indice della slide attiva
+            } else { // altrimenti
+                this.firstSlideActive = 0; // imposta l'indice della slide attiva a 0
+            }
+        },
     },
     mounted() {
 
